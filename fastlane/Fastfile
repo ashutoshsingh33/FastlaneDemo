@@ -35,8 +35,8 @@ platform :android do
   end
 
   desc "Upload a new Beta Build to Hockey App"
-      lane :hockey_build do
-         gradle(task: 'assemble', build_type: 'Debug')
+      lane :hockey_dev_build do
+         gradle(task: 'assembledeveloper', build_type: 'Debug')
 
          hockey(
             api_token: '79d01f1bc2c74bcea99e0405ac7b5aa6',
@@ -45,6 +45,18 @@ platform :android do
                                               pretty: '___ %h %s %n')
          )
    end
+
+    desc "Upload a new Beta Build to Hockey App"
+         lane :hockey_production_build do
+            gradle(task: 'assembleproduction', build_type: 'Debug')
+
+            hockey(
+               api_token: '79d01f1bc2c74bcea99e0405ac7b5aa6',
+               notes_type: '0',
+               notes: changelog_from_git_commits(commits_count: '100',
+                                                 pretty: '___ %h %s %n')
+            )
+      end
 
   desc "Deploy a new version to the Google Play"
   lane :deploy do
