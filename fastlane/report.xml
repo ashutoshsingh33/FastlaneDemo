@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.071366508">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.00305">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: gradle" time="15.453333913">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: changelog_from_git_commits" time="0.006972626">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: hockey" time="11.491733598">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

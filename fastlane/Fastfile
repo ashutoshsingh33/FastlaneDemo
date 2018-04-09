@@ -39,7 +39,7 @@ platform :android do
          gradle(task: 'assemble', build_type: 'Debug')
 
          hockey(
-            api_token: 'c77e4a29f6594f83a6f497c1abe41904',
+            api_token: '79d01f1bc2c74bcea99e0405ac7b5aa6',
             notes_type: '0',
             notes: changelog_from_git_commits(commits_count: '100',
                                               pretty: '___ %h %s %n')
