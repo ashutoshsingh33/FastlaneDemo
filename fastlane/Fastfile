@@ -34,7 +34,7 @@ platform :android do
     # You can also use other beta testing services here
   end
 
-  desc "Upload a new Beta Build to Hockey App"
+  desc "Upload a new developer Build to Hockey App"
       lane :hockey_dev_build do
          gradle(task: 'assembledeveloper', build_type: 'Debug')
 
@@ -46,7 +46,7 @@ platform :android do
          )
    end
 
-    desc "Upload a new Beta Build to Hockey App"
+  desc "Upload a new production Build to Hockey App"
          lane :hockey_production_build do
             gradle(task: 'assembleproduction', build_type: 'Debug')
 
@@ -57,7 +57,7 @@ platform :android do
                                                  pretty: '___ %h %s %n')
             )
 
-      end
+  end
 
   desc "Deploy a new version to the Google Play"
   lane :deploy do
