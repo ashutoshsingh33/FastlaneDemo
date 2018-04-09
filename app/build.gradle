@@ -16,6 +16,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "default"
+    productFlavors {
+        developer {
+            buildConfigField 'String', 'HOST_URL', '"http://dev.com"'
+        }
+
+        production {
+            buildConfigField 'String', 'HOST_URL', '"http://production.com"'
+        }
+    }
 }
 
 dependencies {
